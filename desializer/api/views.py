@@ -17,7 +17,7 @@ def create(request):
     
 @api_view(["GET"])
 def getview(request):
-    return Response(Studentserialier(Student.objects.all(), many = True).data if Studentserialier(Student.objects.all(), many = True) else "No data here")
+    return Response(Studentserialier(Student.objects.all(), many = True).data)
 
 
 
