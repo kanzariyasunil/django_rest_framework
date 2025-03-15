@@ -11,3 +11,6 @@ class Stud(viewsets.ModelViewSet):
     serializer_class = StudentSerializer
 
     
+class readonlyviewset(viewsets.ReadOnlyModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
