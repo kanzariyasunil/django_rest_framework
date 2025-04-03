@@ -7,5 +7,8 @@ router = DefaultRouter()
 router.register("", StudentViews, basename='Student api')
 
 urlpatterns = [
-    path("", include(router.urls))
+    path("", include(router.urls)),
+    path('gettoken', TokenObtainPairView.as_view(), name='token obtaion view'),
+    path('refreashtoekn', TokenRefreshView.as_view(), name='tokenrefresh view'),
+    path('verifytoken', TokenVerifyView.as_view(), name='tokenverify view')
 ]
