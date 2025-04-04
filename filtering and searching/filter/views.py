@@ -15,5 +15,5 @@ class Student_list_view(ListAPIView):
 
     def get_queryset(self):
         print(self.request.user)
-        return OtherStudents.objects.filter(name = self.request.user)
+        return OtherStudents.objects.filter(name = self.request.user.username  )
     
